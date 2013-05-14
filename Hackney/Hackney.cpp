@@ -20,7 +20,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	//RenderSystem renderSystem;
 	Entity e;
 	unsigned int id = e.getId();
-	entitySystem.registerEntity(e);
+//	entitySystem.registerEntity(e);
+
 
 	
 	while(window->isOpen())

@@ -11,12 +11,12 @@ class EntitySystem : ISystem
 public:
 	EntitySystem(void);
 	~EntitySystem(void);
-	void registerEntity(Entity entity);
-	void unregisterEntity(Entity entity);
-	void getEntityById(unsigned int id);
+	void static registerEntity(Entity entity);
+	void static unregisterEntity(Entity entity);
+	void static getEntityById(unsigned int id);
 	virtual void draw();
 	virtual void update();
 private:
-	vector<Entity> entities;
+	static vector<Entity> entities;
 };
 

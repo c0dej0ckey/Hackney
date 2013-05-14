@@ -10,3 +10,8 @@ IComponent::IComponent(void)
 IComponent::~IComponent(void)
 {
 }
+
+void IComponent::update()
+{
+
+}

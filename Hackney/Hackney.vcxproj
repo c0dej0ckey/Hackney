@@ -145,7 +145,11 @@
     <ClInclude Include="EntityNumberGenerator.h" />
     <ClInclude Include="EntitySystem.h" />
     <ClInclude Include="IComponent.h" />
+    <ClInclude Include="InputComponent.h" />
     <ClInclude Include="ISystem.h" />
+    <ClInclude Include="MovementComponent.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="RenderComponent.h" />
     <ClInclude Include="RenderSystem.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="SystemsManager.h" />
@@ -157,7 +161,11 @@
     <ClCompile Include="EntitySystem.cpp" />
     <ClCompile Include="Hackney.cpp" />
     <ClCompile Include="IComponent.cpp" />
+    <ClCompile Include="InputComponent.cpp" />
     <ClCompile Include="ISystem.cpp" />
+    <ClCompile Include="MovementComponent.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="RenderComponent.cpp" />
     <ClCompile Include="RenderSystem.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -172,6 +180,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Box2D\lib\box2d.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\th_Mario.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

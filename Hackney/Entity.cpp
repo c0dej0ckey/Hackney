@@ -1,12 +1,14 @@
 #include "stdafx.h"
 #include "Entity.h"
 #include "EntityNumberGenerator.h"
+#include "EntitySystem.h"
 
 using namespace std;
 
 Entity::Entity(void)
 {
 	id = EntityNumberGenerator::getId();
+	EntitySystem::registerEntity((*this));
 }
 
 
