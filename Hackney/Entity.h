@@ -12,7 +12,7 @@ public:
 	~Entity(void);
 	unsigned getId();
 	void setId(unsigned int id);
-
+	virtual IComponent *getComponent(string componentName);
 private:
 	
 	vector<IComponent> components;

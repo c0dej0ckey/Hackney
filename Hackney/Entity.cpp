@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Entity.h"
+#include "IComponent.h"
 #include "EntityNumberGenerator.h"
 #include "EntitySystem.h"
 
@@ -24,4 +25,9 @@ unsigned int Entity::getId()
 void Entity::setId(unsigned int id)
 {
 	this->id = id;
+}
+
+IComponent *Entity::getComponent(string componentName)
+{
+	return NULL;
 }

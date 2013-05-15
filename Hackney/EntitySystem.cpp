@@ -34,10 +34,17 @@ void EntitySystem::unregisterEntity(Entity entity)
 	}
 }
 
+vector<Entity> EntitySystem::getEntities()
+{
+	return entities;
+}
+
 void EntitySystem::draw()
 {
 }
 
 void EntitySystem::update()
 {
+	
+
 }

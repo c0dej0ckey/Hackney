@@ -10,11 +10,11 @@ class RenderComponent :
 public:
 	RenderComponent(string filepath);
 	~RenderComponent(void);
-	sf::Image getTexture();
-	void setTexture(sf::Image texture);
+	sf::Texture getTexture();
+	void setTexture(sf::Texture texture);
 	virtual void update();
 
 private:
-	sf::Image texture;
+	sf::Texture texture;
 };
 

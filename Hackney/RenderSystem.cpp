@@ -1,7 +1,14 @@
 #include "stdafx.h"
 #include "RenderSystem.h"
+#include "EntitySystem.h"
+#include "Entity.h"
 #include "SFML\Graphics.hpp"
+#include "RenderComponent.h"
+#include "MovementComponent.h"
+#include <vector>
 
+
+using namespace std;
 
 RenderSystem::RenderSystem(void)
 {
@@ -19,11 +26,26 @@ RenderSystem::~RenderSystem(void)
 void RenderSystem::draw()
 {
 	
-	sf::CircleShape shape(100.f);
+	/*sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
 	window->clear();
 	window->draw(shape);
-	window->display();
+	window->display();*/
+
+	window->clear();
+
+	vector<Entity> entities = EntitySystem::getEntities();
+	vector<Entity>::iterator iter = entities.begin();
+	for(iter; iter < entities.end(); ++iter)
+	{
+		RenderComponent *renderComponent = (RenderComponent *)iter->getComponent("RENDER");
+		MovementComponent *movementComponent = (MovementComponent *)iter->getComponent("MOVEMENT");
+		sf::Sprite sprite(renderComponent->getTexture());
+		sprite.setPosition(movementComponent->getXPosition(), movementComponent->getYPosition());
+		window->draw(sprite);
+	}
+	
+
 }
 
 void RenderSystem::update()

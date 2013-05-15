@@ -8,6 +8,7 @@
 #include "Entity.h"
 #include "EntitySystem.h"
 #include "RenderSystem.h"
+#include "Player.h"
 
 using namespace std;
 
@@ -18,10 +19,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	EntitySystem entitySystem;
 	RenderSystem renderSystem(*window);
 	//RenderSystem renderSystem;
-	Entity e;
-	unsigned int id = e.getId();
+	Player p;
 //	entitySystem.registerEntity(e);
-
+	
 
 	
 	while(window->isOpen())

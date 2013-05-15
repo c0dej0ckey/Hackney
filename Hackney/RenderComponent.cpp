@@ -12,12 +12,12 @@ RenderComponent::~RenderComponent(void)
 {
 }
 
-sf::Image RenderComponent::getTexture()
+sf::Texture RenderComponent::getTexture()
 {
 	return texture;
 }
 
-void RenderComponent::setTexture(sf::Image texture)
+void RenderComponent::setTexture(sf::Texture texture)
 {
 	this->texture = texture;
 }
