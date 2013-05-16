@@ -5,6 +5,7 @@
 #include "SFML\Graphics.hpp"
 #include "RenderComponent.h"
 #include "MovementComponent.h"
+#include "Player.h"
 #include <vector>
 
 
@@ -34,17 +35,19 @@ void RenderSystem::draw()
 
 	window->clear();
 
-	vector<Entity> entities = EntitySystem::getEntities();
-	vector<Entity>::iterator iter = entities.begin();
+	vector<Entity*> entities = EntitySystem::getEntities();
+	vector<Entity*>::iterator iter = entities.begin();
 	for(iter; iter < entities.end(); ++iter)
 	{
-		RenderComponent *renderComponent = (RenderComponent *)iter->getComponent("RENDER");
-		MovementComponent *movementComponent = (MovementComponent *)iter->getComponent("MOVEMENT");
+		
+		RenderComponent *renderComponent = (RenderComponent *)(*iter)->getComponent("RENDER");
+		MovementComponent *movementComponent = (MovementComponent *)(*iter)->getComponent("MOVEMENT");
 		sf::Sprite sprite(renderComponent->getTexture());
-		sprite.setPosition(movementComponent->getXPosition(), movementComponent->getYPosition());
+		sprite.setPosition(0,0);
 		window->draw(sprite);
 	}
 	
+	window->display();
 
 }
 

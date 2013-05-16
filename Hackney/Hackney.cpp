@@ -19,7 +19,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	EntitySystem entitySystem;
 	RenderSystem renderSystem(*window);
 	//RenderSystem renderSystem;
-	Player p;
+	Player *p = new Player();
+	p->getComponent("RENDER");
 //	entitySystem.registerEntity(e);
 	
 

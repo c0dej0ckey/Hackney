@@ -5,7 +5,7 @@
 
 using namespace std;
 
-vector<Entity> EntitySystem::entities;
+vector<Entity*> EntitySystem::entities;
 
 EntitySystem::EntitySystem(void)
 {
@@ -15,26 +15,26 @@ EntitySystem::~EntitySystem(void)
 {
 }
 
-void EntitySystem::registerEntity(Entity entity)
+void EntitySystem::registerEntity(Entity *entity)
 {
 	//entities.push_back(entity);
 	entities.push_back(entity);
 	
 }
 
-void EntitySystem::unregisterEntity(Entity entity)
+void EntitySystem::unregisterEntity(Entity *entity)
 {
 	
-	for(vector<Entity>::iterator iter = entities.begin(); iter < entities.end(); iter++)
+	for(vector<Entity*>::iterator iter = entities.begin(); iter < entities.end(); iter++)
 	{
-		if(iter->getId() == entity.getId())
+		if((*iter)->getId() == entity->getId())
 		{
 			entities.erase(iter);
 		}
 	}
 }
 
-vector<Entity> EntitySystem::getEntities()
+vector<Entity*> EntitySystem::getEntities()
 {
 	return entities;
 }

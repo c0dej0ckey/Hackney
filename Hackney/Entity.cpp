@@ -9,7 +9,7 @@ using namespace std;
 Entity::Entity(void)
 {
 	id = EntityNumberGenerator::getId();
-	EntitySystem::registerEntity((*this));
+	EntitySystem::registerEntity(this);
 }
 
 
