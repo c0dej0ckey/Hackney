@@ -5,6 +5,8 @@
 
 using namespace std;
 
+class IComponent;
+
 class Entity
 {
 public:

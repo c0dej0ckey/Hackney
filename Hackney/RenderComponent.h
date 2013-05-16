@@ -7,7 +7,7 @@ using namespace std;
 class RenderComponent : public IComponent
 {
 public:
-	RenderComponent(string filepath);
+	RenderComponent(Entity* owner, string filepath);
 	~RenderComponent(void);
 	sf::Texture& getTexture();
 	void setTexture(sf::Texture *texture);

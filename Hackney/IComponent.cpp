@@ -2,8 +2,9 @@
 #include "IComponent.h"
 
 
-IComponent::IComponent(void)
+IComponent::IComponent(Entity* owner)
 {
+	this->owner = owner;
 }
 
 

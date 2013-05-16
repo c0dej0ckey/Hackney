@@ -6,7 +6,7 @@
 class MovementComponent : public IComponent
 {
 public:
-	MovementComponent(double xPosition, double yPosition, double xDirection, double yDirection, double xSpeed, double ySpeed);
+	MovementComponent(Entity* owner, double xPosition, double yPosition, double xDirection, double yDirection, double xSpeed, double ySpeed);
 	~MovementComponent(void);
 	void setPosition(sf::Vector2<double> position);
 	sf::Vector2<double> getPosition();
@@ -20,7 +20,9 @@ public:
 	double getYDirection();
 	double getXSpeed();
 	double getYSpeed();
-
+	void setXDirection(double x);
+	void setYDirection(double y);
+	void update();
 
 
 

@@ -5,7 +5,7 @@
 class InputComponent : public IComponent
 {
 public:
-	InputComponent(void);
+	InputComponent(Entity* owner);
 	~InputComponent(void);
 	void update();
 };

@@ -1,8 +1,9 @@
 #include "stdafx.h"
 #include "RenderComponent.h"
+#include "IComponent.h"
 
 
-RenderComponent::RenderComponent(string filepath)
+RenderComponent::RenderComponent(Entity* owner, string filepath) : IComponent(owner)
 {
 	this->texture = new sf::Texture();
 	texture->loadFromFile(filepath);
