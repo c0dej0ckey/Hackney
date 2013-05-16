@@ -2,11 +2,11 @@
 
 #include "IComponent.h"
 
-class InputComponent : IComponent
+class InputComponent : public IComponent
 {
 public:
 	InputComponent(void);
 	~InputComponent(void);
-	virtual void update();
+	void update();
 };
 

@@ -14,14 +14,11 @@ using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	sf::RenderWindow *window = new sf::RenderWindow(sf::VideoMode(200,200), "SFML works!");
+	sf::RenderWindow *window = new sf::RenderWindow(sf::VideoMode(800,600), "SFML works!");
 
 	EntitySystem entitySystem;
 	RenderSystem renderSystem(*window);
-	//RenderSystem renderSystem;
 	Player *p = new Player();
-	p->getComponent("RENDER");
-//	entitySystem.registerEntity(e);
 	
 
 	
@@ -36,7 +33,6 @@ int _tmain(int argc, _TCHAR* argv[])
 				window->close();
 		}
 	}
-
 
 
 	return 0;

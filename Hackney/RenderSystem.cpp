@@ -42,8 +42,10 @@ void RenderSystem::draw()
 		
 		RenderComponent *renderComponent = (RenderComponent *)(*iter)->getComponent("RENDER");
 		MovementComponent *movementComponent = (MovementComponent *)(*iter)->getComponent("MOVEMENT");
-		sf::Sprite sprite(renderComponent->getTexture());
-		sprite.setPosition(0,0);
+		
+		sf::Texture tex = renderComponent->getTexture();
+		sf::Sprite sprite(tex);
+		sprite.setPosition(0,520);
 		window->draw(sprite);
 	}
 	

@@ -17,7 +17,6 @@ EntitySystem::~EntitySystem(void)
 
 void EntitySystem::registerEntity(Entity *entity)
 {
-	//entities.push_back(entity);
 	entities.push_back(entity);
 	
 }
