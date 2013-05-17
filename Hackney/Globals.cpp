@@ -4,15 +4,16 @@
 
 using namespace std;
 
-sf::Clock *Globals::gameTime;
+sf::Clock *Globals::gameTime = new sf::Clock();
 
-Globals::Globals(void)
+Globals::Globals(void) 
 {
 }
 
 
 Globals::~Globals(void)
 {
+	delete gameTime;
 }
 
 sf::Clock Globals::getGameTime()
@@ -23,4 +24,9 @@ sf::Clock Globals::getGameTime()
 void Globals::setGameTime(sf::Clock *clock)
 {
 	gameTime = clock;
+}
+
+void Globals::restartGameTime()
+{
+	gameTime->restart();
 }

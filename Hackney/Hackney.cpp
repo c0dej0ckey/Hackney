@@ -25,6 +25,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	
 	while(window->isOpen())
 	{
+		Globals::restartGameTime();
+
 		renderSystem.draw();
 
 		sf::Event event;

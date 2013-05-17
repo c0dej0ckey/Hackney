@@ -22,6 +22,16 @@ double MovementComponent::getYPosition()
 	return position.y;
 }
 
+double MovementComponent::getXDirection()
+{
+	return direction.x;
+}
+
+double MovementComponent::getYDirection()
+{
+	return direction.y;
+}
+
 void MovementComponent::setXDirection(double x)
 {
 	direction.x = x;

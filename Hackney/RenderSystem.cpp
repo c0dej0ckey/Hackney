@@ -6,6 +6,7 @@
 #include "RenderComponent.h"
 #include "MovementComponent.h"
 #include "Player.h"
+#include "Globals.h"
 #include <vector>
 
 
@@ -27,11 +28,6 @@ RenderSystem::~RenderSystem(void)
 void RenderSystem::draw()
 {
 	sf::Clock clock;
-	/*sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
-	window->clear();
-	window->draw(shape);
-	window->display();*/
 
 	window->clear();
 
@@ -46,9 +42,16 @@ void RenderSystem::draw()
 
 		renderComponent->update();
 		inputComponent->update();
+
+		
+
 		//movementComponent->update();
-		//double x = movementComponent->getXPosition();
-		//x += movementComponent->getXDirection() * 160 * clock.getElapsedTime().asSeconds();
+		double x = movementComponent->getXPosition();
+		double y = movementComponent->getYPosition();
+		x += movementComponent->getXDirection() * 300 * Globals::getGameTime().getElapsedTime().asSeconds();
+		y += movementComponent->getYDirection() * 300 * Globals::getGameTime().getElapsedTime().asSeconds();
+		movementComponent->setXPosition(x);
+		movementComponent->setYPosition(y);
 		//movementComponent->
 
 		sf::Texture tex = renderComponent->getTexture();
