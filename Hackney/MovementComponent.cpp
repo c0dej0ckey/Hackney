@@ -32,8 +32,18 @@ void MovementComponent::setYDirection(double y)
 	direction.y = y;
 }
 
+void MovementComponent::setXPosition(double x)
+{
+	position.x = x;
+}
+
+void MovementComponent::setYPosition(double y)
+{
+	position.y = y;
+}
+
 void MovementComponent::update()
 {
-	position.x += direction.x * speed.x;
-	position.y += direction.y * speed.y;
+	//position.x += direction.x * speed.x;
+	//position.y += direction.y * speed.y;
 }

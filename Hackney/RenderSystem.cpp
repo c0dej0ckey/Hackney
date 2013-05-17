@@ -26,7 +26,7 @@ RenderSystem::~RenderSystem(void)
 
 void RenderSystem::draw()
 {
-	
+	sf::Clock clock;
 	/*sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
 	window->clear();
@@ -42,9 +42,14 @@ void RenderSystem::draw()
 		
 		RenderComponent *renderComponent = (RenderComponent *)(*iter)->getComponent("RENDER");
 		MovementComponent *movementComponent = (MovementComponent *)(*iter)->getComponent("MOVEMENT");
-		
+		InputComponent *inputComponent = (InputComponent *)(*iter)->getComponent("INPUT");
+
 		renderComponent->update();
-		movementComponent->update();
+		inputComponent->update();
+		//movementComponent->update();
+		//double x = movementComponent->getXPosition();
+		//x += movementComponent->getXDirection() * 160 * clock.getElapsedTime().asSeconds();
+		//movementComponent->
 
 		sf::Texture tex = renderComponent->getTexture();
 		sf::Sprite sprite(tex);

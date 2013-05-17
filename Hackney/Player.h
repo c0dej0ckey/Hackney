@@ -3,6 +3,7 @@
 #include "Entity.h"
 #include "RenderComponent.h"
 #include "MovementComponent.h"
+#include "InputComponent.h"
 
 class Player : public Entity
 {
@@ -14,5 +15,6 @@ public:
 private:
 	RenderComponent renderComponent;
 	MovementComponent movementComponent;
+	InputComponent inputComponent;
 };
 

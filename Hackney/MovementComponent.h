@@ -22,6 +22,8 @@ public:
 	double getYSpeed();
 	void setXDirection(double x);
 	void setYDirection(double y);
+	void setXPosition(double x);
+	void setYPosition(double y);
 	void update();
 
 
