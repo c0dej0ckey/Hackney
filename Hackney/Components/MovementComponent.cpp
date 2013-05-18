@@ -2,10 +2,14 @@
 #include "MovementComponent.h"
 #include "IComponent.h"
 
-MovementComponent::MovementComponent(Entity* owner, double xPosition, double yPosition, double xDirection, double yDirection, double xSpeed, double ySpeed) : IComponent(owner), position(xPosition, yPosition) , direction(xDirection, yDirection),
+namespace Components
+{
+
+MovementComponent::MovementComponent(Entities::Entity* owner, double xPosition, double yPosition, double xDirection, double yDirection, double xSpeed, double ySpeed) : IComponent(owner), position(xPosition, yPosition) , direction(xDirection, yDirection),
 	speed(xSpeed, ySpeed) 
 {
 }
+
 
 
 MovementComponent::~MovementComponent(void)
@@ -56,4 +60,7 @@ void MovementComponent::update()
 {
 	//position.x += direction.x * speed.x;
 	//position.y += direction.y * speed.y;
+	
+}
+
 }

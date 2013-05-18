@@ -4,6 +4,9 @@
 
 using namespace std;
 
+namespace Utilities
+{
+
 EntityNumberGenerator::EntityNumberGenerator(void)
 {
 }
@@ -17,4 +20,6 @@ unsigned int EntityNumberGenerator::getId()
 {
 	unsigned int id = rand() % RANDOM_MAX_RANGE;
 	return id;
+}
+
 }

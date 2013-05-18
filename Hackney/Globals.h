@@ -3,8 +3,9 @@
 
 using namespace std;
 
-class Globals
 
+
+class Globals
 {
 public:
 	Globals(void);

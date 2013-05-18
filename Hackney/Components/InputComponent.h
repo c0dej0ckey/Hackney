@@ -2,11 +2,15 @@
 
 #include "IComponent.h"
 
+namespace Components
+{
+
 class InputComponent : public IComponent
 {
 public:
-	InputComponent(Entity* owner);
+	InputComponent(Entities::Entity* owner);
 	~InputComponent(void);
 	void update();
 };
 
+}

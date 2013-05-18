@@ -1,23 +1,28 @@
 #pragma once
-#include "Entity.h"
+#include "..\Entities\Entity.h"
 #include "ISystem.h"
+
 
 #include <vector>
 
 using namespace std;
+
+namespace Systems
+{
 
 class EntitySystem : ISystem
 {
 public:
 	EntitySystem(void);
 	~EntitySystem(void);
-	void static registerEntity(Entity *entity);
-	void static unregisterEntity(Entity *entity);
+	void static registerEntity(Entities::Entity *entity);
+	void static unregisterEntity(Entities::Entity *entity);
 	void static getEntityById(unsigned int id);
-	vector<Entity*> static getEntities();
+	vector<Entities::Entity*> static getEntities();
 	virtual void draw();
 	virtual void update();
 private:
-	static vector<Entity*> entities;
+	static vector<Entities::Entity*> entities;
 };
 
+}

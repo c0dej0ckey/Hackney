@@ -2,8 +2,11 @@
 #include "RenderComponent.h"
 #include "IComponent.h"
 
+namespace Components
+{
 
-RenderComponent::RenderComponent(Entity* owner, string filepath) : IComponent(owner)
+
+RenderComponent::RenderComponent(Entities::Entity* owner, string filepath) : IComponent(owner)
 {
 	this->texture = new sf::Texture();
 	texture->loadFromFile(filepath);
@@ -27,5 +30,7 @@ void RenderComponent::setTexture(sf::Texture *texture)
 
 void RenderComponent::update()
 {
+
+}
 
 }

@@ -1,4 +1,8 @@
 #pragma once
+
+namespace Systems
+{
+
 class ISystem
 {
 public:
@@ -8,3 +12,4 @@ public:
 	~ISystem(void);
 };
 
+}

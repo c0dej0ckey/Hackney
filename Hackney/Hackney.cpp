@@ -5,13 +5,14 @@
 #include <Box2D\Box2D.h>
 #include <SFML\Graphics.hpp>
 #include <cstdio>
-#include "Entity.h"
-#include "EntitySystem.h"
-#include "RenderSystem.h"
-#include "Player.h"
+#include "Entities\Entity.h"
+#include "Systems\EntitySystem.h"
+#include "Systems\RenderSystem.h"
+#include "Entities\Player.h"
 #include "Globals.h"
 
 using namespace std;
+using namespace Systems;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -19,7 +20,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	Globals global;
 	EntitySystem entitySystem;
 	RenderSystem renderSystem(*window);
-	Player *p = new Player();
+	Entities::Player *p = new Entities::Player();
 	
 
 	

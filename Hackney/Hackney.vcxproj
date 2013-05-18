@@ -141,42 +141,41 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Entity.h" />
-    <ClInclude Include="EntityNumberGenerator.h" />
-    <ClInclude Include="EntitySystem.h" />
+    <ClInclude Include="Components\IComponent.h" />
+    <ClInclude Include="Components\InputComponent.h" />
+    <ClInclude Include="Components\MovementComponent.h" />
+    <ClInclude Include="Components\RenderComponent.h" />
+    <ClInclude Include="Entities\Entity.h" />
+    <ClInclude Include="Entities\Player.h" />
     <ClInclude Include="Globals.h" />
-    <ClInclude Include="IComponent.h" />
-    <ClInclude Include="InputComponent.h" />
-    <ClInclude Include="ISystem.h" />
-    <ClInclude Include="MovementComponent.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="RenderComponent.h" />
-    <ClInclude Include="RenderSystem.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="SystemsManager.h" />
+    <ClInclude Include="Systems\EntitySystem.h" />
+    <ClInclude Include="Systems\ISystem.h" />
+    <ClInclude Include="Systems\RenderSystem.h" />
+    <ClInclude Include="Systems\SystemsManager.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Utilities\EntityNumberGenerator.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Entity.cpp" />
-    <ClCompile Include="EntityNumberGenerator.cpp" />
-    <ClCompile Include="EntitySystem.cpp" />
+    <ClCompile Include="Components\IComponent.cpp" />
+    <ClCompile Include="Components\InputComponent.cpp" />
+    <ClCompile Include="Components\MovementComponent.cpp" />
+    <ClCompile Include="Components\RenderComponent.cpp" />
+    <ClCompile Include="Entities\Entity.cpp" />
+    <ClCompile Include="Entities\Player.cpp" />
     <ClCompile Include="Globals.cpp" />
     <ClCompile Include="Hackney.cpp" />
-    <ClCompile Include="IComponent.cpp" />
-    <ClCompile Include="InputComponent.cpp" />
-    <ClCompile Include="ISystem.cpp" />
-    <ClCompile Include="MovementComponent.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="RenderComponent.cpp" />
-    <ClCompile Include="RenderSystem.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="SystemsManager.cpp" />
+    <ClCompile Include="Systems\EntitySystem.cpp" />
+    <ClCompile Include="Systems\ISystem.cpp" />
+    <ClCompile Include="Systems\RenderSystem.cpp" />
+    <ClCompile Include="Systems\SystemsManager.cpp" />
+    <ClCompile Include="Utilities\EntityNumberGenerator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="..\Box2D\lib\Box2D.lib" />

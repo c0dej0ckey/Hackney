@@ -1,4 +1,8 @@
 #pragma once
+
+namespace Utilities
+{
+
 class EntityNumberGenerator
 {
 public:
@@ -10,3 +14,4 @@ private:
 	const static unsigned int RANDOM_MAX_RANGE = 1000000;
 };
 
+}

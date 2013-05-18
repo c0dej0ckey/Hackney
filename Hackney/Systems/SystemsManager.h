@@ -1,4 +1,8 @@
 #pragma once
+
+namespace Systems
+{
+
 class SystemsManager
 {
 public:
@@ -6,3 +10,4 @@ public:
 	~SystemsManager(void);
 };
 
+}
