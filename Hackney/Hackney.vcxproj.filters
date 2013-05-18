@@ -37,6 +37,9 @@
     <Filter Include="Header Files\Components">
       <UniqueIdentifier>{470ec60a-ec43-40ab-9a95-2b011626a4f6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Content">
+      <UniqueIdentifier>{070674a1-c51a-41d4-b487-9fd5f4f69bcf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -135,5 +138,10 @@
     <None Include="..\Box2D\lib\box2d.pdb">
       <Filter>Resource Files</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Content\th_Mario.png">
+      <Filter>Content</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -183,6 +183,9 @@
   <ItemGroup>
     <None Include="..\Box2D\lib\box2d.pdb" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Content\th_Mario.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
