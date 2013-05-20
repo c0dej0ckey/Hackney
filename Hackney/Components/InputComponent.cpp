@@ -26,13 +26,20 @@ void InputComponent::update()
 	movementComponent->setYDirection(0);
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 	{
-		movementComponent->setXDirection(-1);
+		movementComponent->setXDirection(-10);
 	}
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 	{
-		movementComponent->setXDirection(1);
+		movementComponent->setXDirection(10);
 	}
-
+	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+	{
+		movementComponent->setYDirection(-10);
+	}
+	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+	{
+		movementComponent->setYDirection(10);
+	}
 
 }
 
