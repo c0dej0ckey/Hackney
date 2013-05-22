@@ -4,7 +4,7 @@
 namespace Entities
 {
 
-Player::Player(void) : renderComponent(this, "Content\\th_Mario.png"), movementComponent(this, 0, 520, 1 , 0, 160, 0), inputComponent(this)
+Player::Player(void) : renderComponent(this, "Content\\th_Mario.png"), movementComponent(this, 0, 520, 0 , 0, 160, 0), inputComponent(this)
 {
 
 }

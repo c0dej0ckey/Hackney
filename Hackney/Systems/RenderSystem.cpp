@@ -45,7 +45,6 @@ namespace Systems
 		
 			Components::RenderComponent *renderComponent = (Components::RenderComponent *)(*iter)->getComponent("RENDER");
 			Components::MovementComponent *movementComponent = (Components::MovementComponent *)(*iter)->getComponent("MOVEMENT");
-			Components::InputComponent *inputComponent = (Components::InputComponent *)(*iter)->getComponent("INPUT");
 
 			renderComponent->update();
 			//inputComponent->update();
@@ -53,17 +52,15 @@ namespace Systems
 		
 
 			//movementComponent->update();
-			double x = movementComponent->getXPosition();
+			/*double x = movementComponent->getXPosition();
 			double y = movementComponent->getYPosition();
 			x += movementComponent->getXDirection() * 30000 * Globals::getGameTime().getElapsedTime().asSeconds();
 			y += movementComponent->getYDirection() * 30000 * Globals::getGameTime().getElapsedTime().asSeconds();
 			movementComponent->setXPosition(x);
-			movementComponent->setYPosition(y);
+			movementComponent->setYPosition(y);*/
 			//movementComponent->
 
-			cout << x << endl;
-			cout << Globals::getGameTime().getElapsedTime().asSeconds() << endl;
-			cout << movementComponent->getXPosition();
+			
 
 
 			sf::Texture tex = renderComponent->getTexture();

@@ -24,6 +24,8 @@ void InputComponent::update()
 	MovementComponent *movementComponent = (MovementComponent *)owner->getComponent("MOVEMENT");
 	movementComponent->setXDirection(0);
 	movementComponent->setYDirection(0);
+
+
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 	{
 		movementComponent->setXDirection(-1);

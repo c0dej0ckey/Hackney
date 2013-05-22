@@ -152,6 +152,7 @@
     <ClInclude Include="Systems\EntitySystem.h" />
     <ClInclude Include="Systems\InputSystem.h" />
     <ClInclude Include="Systems\ISystem.h" />
+    <ClInclude Include="Systems\MovementSystem.h" />
     <ClInclude Include="Systems\RenderSystem.h" />
     <ClInclude Include="Systems\SystemsManager.h" />
     <ClInclude Include="targetver.h" />
@@ -175,6 +176,7 @@
     <ClCompile Include="Systems\EntitySystem.cpp" />
     <ClCompile Include="Systems\InputSystem.cpp" />
     <ClCompile Include="Systems\ISystem.cpp" />
+    <ClCompile Include="Systems\MovementSystem.cpp" />
     <ClCompile Include="Systems\RenderSystem.cpp" />
     <ClCompile Include="Systems\SystemsManager.cpp" />
     <ClCompile Include="Utilities\EntityNumberGenerator.cpp" />

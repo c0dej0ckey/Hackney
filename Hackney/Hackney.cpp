@@ -10,6 +10,7 @@
 #include "Systems\RenderSystem.h"
 #include "Entities\Player.h"
 #include "Systems\InputSystem.h"
+#include "Systems\MovementSystem.h"
 #include "Globals.h"
 
 using namespace std;
@@ -22,6 +23,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	EntitySystem entitySystem;
 	RenderSystem renderSystem(*window);
 	InputSystem inputSystem;
+	MovementSystem movementSystem;
 	Entities::Player *p = new Entities::Player();
 
 	
@@ -30,6 +32,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		Globals::restartGameTime();
 
 		renderSystem.update();
+		movementSystem.update();
 		inputSystem.update();
 		
 

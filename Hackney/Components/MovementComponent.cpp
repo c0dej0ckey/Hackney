@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "MovementComponent.h"
 #include "IComponent.h"
+#include "../Globals.h"
 
 namespace Components
 {
@@ -58,8 +59,8 @@ void MovementComponent::setYPosition(double y)
 
 void MovementComponent::update()
 {
-	//position.x += direction.x * speed.x;
-	//position.y += direction.y * speed.y;
+	position.x += direction.x * 300 * Globals::getGameTime().getElapsedTime().asSeconds();
+	position.y += direction.y * 300 * Globals::getGameTime().getElapsedTime().asSeconds();
 	
 }
 

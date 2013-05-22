@@ -24,7 +24,11 @@ void InputSystem::update()
 	for(vector<Entities::Entity*>::iterator iter = entities.begin(); iter < entities.end(); iter++)
 	{
 		Components::InputComponent *inputComponent  = (Components::InputComponent *)(*iter)->getComponent("INPUT");
-		inputComponent->update();
+		if(inputComponent != NULL)
+		{
+			inputComponent->update();
+		}
+		
 	}
 
 	

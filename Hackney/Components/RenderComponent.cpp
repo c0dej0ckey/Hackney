@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "RenderComponent.h"
 #include "IComponent.h"
+#include "MovementComponent.h"
 
 namespace Components
 {
@@ -30,7 +31,6 @@ void RenderComponent::setTexture(sf::Texture *texture)
 
 void RenderComponent::update()
 {
-
 }
 
 }
