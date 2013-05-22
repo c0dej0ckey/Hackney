@@ -13,9 +13,6 @@ ISystem::~ISystem(void)
 {
 }
 
-void ISystem::draw()
-{
-}
 
 void ISystem::update()
 {

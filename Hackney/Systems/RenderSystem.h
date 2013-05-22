@@ -10,8 +10,7 @@ namespace Systems
 		RenderSystem(void);
 		RenderSystem(sf::RenderWindow &window);
 		~RenderSystem(void);
-		virtual void draw();
-		virtual void update();
+		void update();
 
 	private:
 		sf::RenderWindow *window;

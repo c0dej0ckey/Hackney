@@ -41,9 +41,6 @@ vector<Entities::Entity*> EntitySystem::getEntities()
 	return entities;
 }
 
-void EntitySystem::draw()
-{
-}
 
 void EntitySystem::update()
 {

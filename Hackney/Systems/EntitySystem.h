@@ -19,8 +19,7 @@ public:
 	void static unregisterEntity(Entities::Entity *entity);
 	void static getEntityById(unsigned int id);
 	vector<Entities::Entity*> static getEntities();
-	virtual void draw();
-	virtual void update();
+	void update();
 private:
 	static vector<Entities::Entity*> entities;
 };

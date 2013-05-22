@@ -9,6 +9,7 @@
 #include "Systems\EntitySystem.h"
 #include "Systems\RenderSystem.h"
 #include "Entities\Player.h"
+#include "Systems\InputSystem.h"
 #include "Globals.h"
 
 using namespace std;
@@ -20,15 +21,18 @@ int _tmain(int argc, _TCHAR* argv[])
 	Globals global;
 	EntitySystem entitySystem;
 	RenderSystem renderSystem(*window);
+	InputSystem inputSystem;
 	Entities::Player *p = new Entities::Player();
-	
 
 	
 	while(window->isOpen())
 	{
 		Globals::restartGameTime();
 
-		renderSystem.draw();
+		renderSystem.update();
+		inputSystem.update();
+		
+
 
 		sf::Event event;
 		while(window->pollEvent(event))
