@@ -21,7 +21,7 @@ void RenderWindow::draw(Entities::Entity* entity)
 	if(renderComponent != NULL && movementComponent != NULL)
 	{
 		sprite.setTexture(renderComponent->getTexture());
-		sprite.setPosition(movementComponent->getXPosition(), movementComponent->getYPosition());
+		sprite.setPosition((float)movementComponent->getXPosition(), (float)movementComponent->getYPosition());
 		sf::RenderWindow::draw(sprite);
 	}
 
