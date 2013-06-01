@@ -1,5 +1,6 @@
 #pragma once
 #include "..\Entities\Entity.h"
+#include "SFML\Graphics.hpp"
 
 namespace Entities
 {

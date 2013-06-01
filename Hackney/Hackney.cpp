@@ -18,7 +18,10 @@ using namespace Systems;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	sf::RenderWindow *window = new sf::RenderWindow(sf::VideoMode(800,600), "SFML works!");
+	//sf::RenderWindow *window = new sf::RenderWindow(sf::VideoMode(800,600), "SFML works!");
+	RenderWindow *window = new RenderWindow(sf::VideoMode(800, 600), "SFML works");
+	
+
 	Globals global;
 	EntitySystem entitySystem;
 	RenderSystem renderSystem(*window);
@@ -26,6 +29,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	MovementSystem movementSystem;
 	Entities::Player *p = new Entities::Player();
 
+	
 	
 	while(window->isOpen())
 	{

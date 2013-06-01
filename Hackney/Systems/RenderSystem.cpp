@@ -25,7 +25,7 @@ namespace Systems
 	{
 	}
 
-	RenderSystem::RenderSystem(sf::RenderWindow &window)
+	RenderSystem::RenderSystem(RenderWindow &window)
 	{
 		this->window = &window;
 	}
@@ -47,26 +47,9 @@ namespace Systems
 			Components::MovementComponent *movementComponent = (Components::MovementComponent *)(*iter)->getComponent("MOVEMENT");
 
 			renderComponent->update();
-			//inputComponent->update();
-
-		
-
-			//movementComponent->update();
-			/*double x = movementComponent->getXPosition();
-			double y = movementComponent->getYPosition();
-			x += movementComponent->getXDirection() * 30000 * Globals::getGameTime().getElapsedTime().asSeconds();
-			y += movementComponent->getYDirection() * 30000 * Globals::getGameTime().getElapsedTime().asSeconds();
-			movementComponent->setXPosition(x);
-			movementComponent->setYPosition(y);*/
-			//movementComponent->
-
 			
-
-
-			sf::Texture tex = renderComponent->getTexture();
-			sf::Sprite sprite(tex);
-			sprite.setPosition(movementComponent->getXPosition(), movementComponent->getYPosition());
-			window->draw(sprite);
+			
+			window->draw(*iter);
 		}
 	
 		window->display();

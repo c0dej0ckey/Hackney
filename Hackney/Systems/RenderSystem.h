@@ -1,6 +1,7 @@
 #pragma once
 #include "ISystem.h"
 #include "SFML\Graphics.hpp"
+#include "../RenderWindow.h"
 
 namespace Systems
 {
@@ -8,12 +9,12 @@ namespace Systems
 	{
 	public:
 		RenderSystem(void);
-		RenderSystem(sf::RenderWindow &window);
+		RenderSystem(RenderWindow &window);
 		~RenderSystem(void);
 		void update();
 
 	private:
-		sf::RenderWindow *window;
+		RenderWindow *window;
 	};
 
 }

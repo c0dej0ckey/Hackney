@@ -11,6 +11,8 @@ RenderComponent::RenderComponent(Entities::Entity* owner, string filepath) : ICo
 {
 	this->texture = new sf::Texture();
 	texture->loadFromFile(filepath);
+	
+
 }
 
 
@@ -19,10 +21,11 @@ RenderComponent::~RenderComponent(void)
 	delete texture;
 }
 
-sf::Texture& RenderComponent::getTexture()
+sf::Texture & RenderComponent::getTexture()
 {
 	return (*texture);
 }
+
 
 void RenderComponent::setTexture(sf::Texture *texture)
 {
