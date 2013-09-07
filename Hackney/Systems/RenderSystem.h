@@ -5,7 +5,7 @@
 
 namespace Systems
 {
-	class RenderSystem : ISystem
+	class RenderSystem : public ISystem
 	{
 	public:
 		RenderSystem(void);

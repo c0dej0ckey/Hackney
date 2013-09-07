@@ -10,7 +10,7 @@ using namespace std;
 namespace Systems
 {
 
-class EntitySystem : ISystem
+class EntitySystem : public ISystem
 {
 public:
 	EntitySystem(void);

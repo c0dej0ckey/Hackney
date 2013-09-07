@@ -12,6 +12,9 @@ RenderWindow::~RenderWindow(void)
 {
 }
 
+///This code should not be messed around with
+/// its a bit of a hack to get around the sf::Sprite class since 
+/// all our data needs to be abstracted out
 void RenderWindow::draw(Entities::Entity* entity)
 {
 	sf::Sprite sprite;

@@ -10,7 +10,7 @@ namespace Entities
 namespace Systems
 {
 
-class InputSystem : ISystem
+class InputSystem : public ISystem
 {
 public:
 	InputSystem(void);
